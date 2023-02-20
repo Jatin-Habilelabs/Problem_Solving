@@ -40,7 +40,9 @@ const saveHexcodeInJson = (input) => {
     console.log(data)
 
     fs.writeFile("./hexData.json", JSON.stringify(data), err => {
-      if (err) console.log("Error writing file:", err);
+      if (err) {
+        console.log("Error writing file:", err);
+      }
     });
   });
 
